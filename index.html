@@ -63,7 +63,6 @@
             padding: 0 20px;
         }
 
-        /* Header Styles */
         header {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
@@ -109,7 +108,6 @@
             opacity: 0.9;
         }
 
-        /* Navigation Tabs */
         .tabs {
             display: flex;
             background: rgba(255, 255, 255, 0.15);
@@ -168,7 +166,6 @@
             display: block;
         }
 
-        /* Form Styles */
         .form-container {
             background: var(--light-bg);
             backdrop-filter: blur(10px);
@@ -293,7 +290,6 @@
             transform: translateY(-2px);
         }
 
-        /* Items Grid */
         .items-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -412,8 +408,7 @@
             padding: 0.5rem 1rem;
             font-size: 0.9rem;
         }
-
-        /* Filter Section */
+        
         .filter-section {
             background: var(--light-bg);
             backdrop-filter: blur(10px);
@@ -468,7 +463,6 @@
             box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
         }
 
-        /* Empty State */
         .empty-state {
             text-align: center;
             padding: 3rem;
@@ -481,7 +475,6 @@
             color: var(--border-color);
         }
 
-        /* Footer */
         footer {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
@@ -492,7 +485,6 @@
             border-top: 1px solid var(--border-color);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -549,12 +541,12 @@
         </div>
 
         <main>
-            <!-- Report Item Tab -->
+          
             <div id="report-tab" class="tab-content active">
                 <div class="form-container">
                     <h2 class="form-title">
                         <i class="fas fa-clipboard-list"></i>
-                        Report a Lost or Found Item
+                      
                     </h2>
                     <form>
                         <div class="form-grid">
@@ -612,7 +604,6 @@
                 </div>
             </div>
 
-            <!-- Lost Items Tab -->
             <div id="lost-tab" class="tab-content">
                 <div class="filter-section">
                     <h3 class="filter-title">Filter Lost Items</h3>
@@ -645,7 +636,7 @@
                 </div>
 
                 <div class="items-grid">
-                    <!-- Lost Item 1 -->
+                  
                     <div class="item-card">
                         <div class="item-header">
                             <h3 class="item-title">iPhone 13 Pro</h3>
@@ -676,7 +667,6 @@
                         </div>
                     </div>
 
-                    <!-- Lost Item 2 -->
                     <div class="item-card">
                         <div class="item-header">
                             <h3 class="item-title">Blue Backpack</h3>
@@ -707,7 +697,6 @@
                         </div>
                     </div>
 
-                    <!-- Lost Item 3 -->
                     <div class="item-card">
                         <div class="item-header">
                             <h3 class="item-title">Car Keys</h3>
@@ -740,7 +729,6 @@
                 </div>
             </div>
 
-            <!-- Found Items Tab -->
             <div id="found-tab" class="tab-content">
                 <div class="filter-section">
                     <h3 class="filter-title">Filter Found Items</h3>
@@ -773,7 +761,7 @@
                 </div>
 
                 <div class="items-grid">
-                    <!-- Found Item 1 -->
+                   
                     <div class="item-card">
                         <div class="item-header">
                             <h3 class="item-title">Student ID Card</h3>
@@ -804,7 +792,6 @@
                         </div>
                     </div>
 
-                    <!-- Found Item 2 -->
                     <div class="item-card">
                         <div class="item-header">
                             <h3 class="item-title">Black Wallet</h3>
@@ -835,7 +822,6 @@
                         </div>
                     </div>
 
-                    <!-- Found Item 3 -->
                     <div class="item-card">
                         <div class="item-header">
                             <h3 class="item-title">Red Umbrella</h3>
@@ -879,22 +865,19 @@
 
     <script>
         function openTab(evt, tabName) {
-            // Hide all tab content
+         
             const tabContents = document.getElementsByClassName("tab-content");
             for (let i = 0; i < tabContents.length; i++) {
                 tabContents[i].classList.remove("active");
             }
-            
-            // Remove active class from all tabs
+        
             const tabs = document.getElementsByClassName("tab");
             for (let i = 0; i < tabs.length; i++) {
                 tabs[i].classList.remove("active");
             }
             
-            // Show the specific tab content
             document.getElementById(tabName).classList.add("active");
             
-            // Add active class to the button that opened the tab
             evt.currentTarget.classList.add("active");
         }
     </script>
